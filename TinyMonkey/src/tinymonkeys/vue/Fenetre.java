@@ -123,7 +123,6 @@ public class Fenetre extends JFrame implements PirateEcouteur,
 	/**
 	 * {@inheritDoc}
 	 */
-	@Override
 	public void creationCarte(int[][] carte) {
 		this.vueCarte = new VueCarte(this.largeurEcran, this.hauteurEcran,
 				carte);
@@ -133,7 +132,6 @@ public class Fenetre extends JFrame implements PirateEcouteur,
 	/**
 	 * {@inheritDoc}
 	 */
-	@Override
 	public void changementCarte(int[][] carte) {
 		this.vueCarte.setVueCarte(carte);
 
@@ -156,7 +154,6 @@ public class Fenetre extends JFrame implements PirateEcouteur,
 	/**
 	 * {@inheritDoc}
 	 */
-	@Override
 	public void ajoutPirate(int id, int x, int y, String avatar) {
 		this.vuePirate = new VuePirate(this.vueCarte.getTailleCase(),
 				this.vueCarte.getXGrille(), this.vueCarte.getYGrille(), x, y,
@@ -167,7 +164,6 @@ public class Fenetre extends JFrame implements PirateEcouteur,
 	/**
 	 * {@inheritDoc}
 	 */
-	@Override
 	public void deplacementPirate(int id, int x, int y) {
 		this.vuePirate.setPosition(x, y);
 		repaint();
@@ -176,7 +172,6 @@ public class Fenetre extends JFrame implements PirateEcouteur,
 	/**
 	 * {@inheritDoc}
 	 */
-	@Override
 	public void mortPirate(int id) {
 		this.vuePirate.mortPirate();
 		this.clavierDisponible = false; // Joueur devient immobile
@@ -186,7 +181,6 @@ public class Fenetre extends JFrame implements PirateEcouteur,
 	/**
 	 * {@inheritDoc}
 	 */
-	@Override
 	public void creationSingeErratique(int id, int x, int y) {
 		final VueSingeErratique vse = new VueSingeErratique(
 				this.vueCarte.getTailleCase(), this.vueCarte.getXGrille(),
@@ -201,7 +195,6 @@ public class Fenetre extends JFrame implements PirateEcouteur,
 	/**
 	 * {@inheritDoc}
 	 */
-	@Override
 	public void deplacementSingeErratique(int id, int x, int y) {
 		final VueSingeErratique vse = this.vuesSingesErratiques.get(id);
 		vse.setPosition(x, y);
@@ -211,7 +204,6 @@ public class Fenetre extends JFrame implements PirateEcouteur,
 	/**
 	 * {@inheritDoc}
 	 */
-	@Override
 	public void creationTresor(int x, int y) {
 		this.vueTresor = new VueTresor(this.vueCarte.getTailleCase(),
 				this.vueCarte.getXGrille(), this.vueCarte.getYGrille(), x, y);
@@ -222,7 +214,6 @@ public class Fenetre extends JFrame implements PirateEcouteur,
 	/**
 	 * {@inheritDoc}
 	 */
-	@Override
 	public void suppressionTresor() {
 		this.layeredPane.remove(this.vueTresor);
 		repaint();
@@ -231,7 +222,6 @@ public class Fenetre extends JFrame implements PirateEcouteur,
 	/**
 	 * {@inheritDoc}
 	 */
-	@Override
 	public void liberationClavier() {
 		this.clavierDisponible = true;
 	}
@@ -243,7 +233,6 @@ public class Fenetre extends JFrame implements PirateEcouteur,
 	 * @param keyEvent
 	 *            l'evenement sur le clavier.
 	 */
-	@Override
 	public void keyPressed(KeyEvent keyEvent) {
 		if (this.clavierDisponible) {
 			// blocage du clavier afin de le rendre inactif.
@@ -282,12 +271,10 @@ public class Fenetre extends JFrame implements PirateEcouteur,
 		}
 	}
 
-	@Override
 	public void keyReleased(KeyEvent arg0) {
 
 	}
 
-	@Override
 	public void keyTyped(KeyEvent keyEvent) {
 
 	}
