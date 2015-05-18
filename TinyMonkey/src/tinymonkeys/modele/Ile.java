@@ -248,14 +248,14 @@ public class Ile
 	 */
 	public void creationTresor()
 	{		
-		
+		final Random random = new Random();
 		int abcisse = 0;
 		int ordonnees = 0;
 
 		boolean place = false;
 		while(!place){
-			abcisse = getRandomNumber(this.carte.length);
-			ordonnees = getRandomNumber(this.carte.length);
+			abcisse = random.nextInt(this.carte.length);
+			ordonnees = random.nextInt(this.carte.length);
 			if(0 != this.valeurCarte(abcisse,ordonnees)){
 				place = true;
 			}
