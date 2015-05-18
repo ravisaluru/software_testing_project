@@ -4,10 +4,6 @@
 <!--
     This configuration file was written by the eclipse-cs plugin configuration editor
 -->
-<!--
-    Checkstyle-Configuration: tinyMonkCheck
-    Description: fichier de configuration checkstyle, par guillaume Escarieux - FIL A2
--->
 <module name="Checker">
   <property name="severity" value="warning"/>
   <module name="TreeWalker">
