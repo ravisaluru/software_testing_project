@@ -1,3 +1,6 @@
+** PMD report generated from Eclipse PMD Plugin.**
+
+
 src/test/DeplacementSingeMockTest.java:19:	Each class should declare at least one constructor
 src/test/DeplacementSingeMockTest.java:25:	Found non-transient, non-static member. Please mark as transient or provide accessors.
 src/test/DeplacementSingeMockTest.java:31:	Found non-transient, non-static member. Please mark as transient or provide accessors.
