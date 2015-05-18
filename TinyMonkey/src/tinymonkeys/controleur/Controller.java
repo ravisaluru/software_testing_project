@@ -33,7 +33,7 @@ public class Controller
 	/**
 	 * Le nombre de singes erratiques.
 	 */
-	private static final int NOMBRE_SINGES_ERRATIQUES = 10;
+	private static final int Number_Of_Monkeys = 10;
 	
 	/**
 	 * Fenetre de l'interface graphique.
@@ -52,7 +52,6 @@ public class Controller
 	{
 		this.fenetre = new Fenetre("TinyMonkeys", this);
 		
-		// Sortie de l'application quand la fenetre est fermee via la croix.
 		this.fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
 		this.fenetre.setVisible(true);
 		
@@ -64,7 +63,7 @@ public class Controller
 		
 		this.monkeyIsland.creationTresor();
 		
-		this.monkeyIsland.ajoutSingesErratiques(NOMBRE_SINGES_ERRATIQUES);
+		this.monkeyIsland.ajoutSingesErratiques(Number_Of_Monkeys);
 		
 		this.monkeyIsland.getPirate().enregistreEcPirate(this.fenetre);
 		this.monkeyIsland.ajoutPirate(IMAGE_PIRATE);
@@ -79,11 +78,7 @@ public class Controller
 	}
 	
 	/**
-	 * Methode permettant de faire la demande de deplacement du pirate. 
-	 * Cette methode fait suite a un appui sur une fleche directionnelle du clavier.
-	 * 
-	 * @param dx la direction en abscisse.
-	 * @param dy la direction en ordonnee.
+	 * The frame limit co-ordinates for the JFrame
 	 */
 	public void demandeDeplacementPirate(int dx, int dy)
 	{

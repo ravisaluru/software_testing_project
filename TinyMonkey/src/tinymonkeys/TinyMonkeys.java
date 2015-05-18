@@ -3,7 +3,7 @@ package tinymonkeys;
 import tinymonkeys.controleur.Controller;
 
 /**
- * Classe principale de TinyMonkeys.
+ * Main Class, project execution starts from here.
  * 
  * @version 1.0
  * @author Guillaume
@@ -13,19 +13,14 @@ final public class TinyMonkeys
 {
 
 	/**
-	 * Constructeur privÃ© de TinyMonkeys.
-	 * 
-	 * Ce constructeur privÃ© assure la non-instanciation de TinyMonkeys dans un programme.
-	 * (TinyMonkeys est la classe principale du programme TinyMonkeys)
+	 * Default Constructor
 	 */
 	private TinyMonkeys() 
 	{
-		// Constructeur privÃ© pour assurer la non-instanciation de TinyMonkeys.
-		
 	}
 	
 	/**
-	 * Main du programme.
+	 * Main Method.
 	 * 
 	 * @param args arguments.
 	 */

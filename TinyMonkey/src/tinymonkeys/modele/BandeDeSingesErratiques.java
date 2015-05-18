@@ -16,6 +16,7 @@ import utils.Constantes;
  */
 public class BandeDeSingesErratiques extends Thread
 {
+	final Random random = new Random();
 	/**
 	 * Vecteur contenant l'ensemble des singes erratiques.
 	 */
@@ -62,14 +63,14 @@ public class BandeDeSingesErratiques extends Thread
 	 */
 	public void ajoutSingesErratiques(int nombreS)
 	{
-		final Random random = new Random();
+		
 		int abcisse = 0;
 		int ordonnees = 0;
 		for (int i = 0; i < nombreS; i++) {
 			boolean place = false;
 			while(!place){
-				abcisse = random.nextInt(this.monkeyIsland.getLargeurCarte());
-				ordonnees = random.nextInt(this.monkeyIsland.getLargeurCarte());
+				abcisse = getRandomNumber(this.monkeyIsland.getLargeurCarte());
+				ordonnees = getRandomNumber(this.monkeyIsland.getLargeurCarte());
 				if(1 == this.monkeyIsland.valeurCarte(abcisse,ordonnees)){
 					place = true;
 				}
@@ -81,7 +82,9 @@ public class BandeDeSingesErratiques extends Thread
 		}					
 	}
 
-	
+	public int getRandomNumber(int seed){
+		return random.nextInt(seed);
+	}
 	
 	/**
 	 * Enregistre dans la liste des ecouteurs de bande de singes l'ecouteur passe en parametre.
@@ -107,7 +110,7 @@ public class BandeDeSingesErratiques extends Thread
 				Thread.sleep(Constantes.ATTENTE_DEPLACEMENT_SINGE);
 			} 
 			catch (InterruptedException e){
-				e.printStackTrace();
+				System.out.println(e.getMessage());
 			}
 		}
 	}

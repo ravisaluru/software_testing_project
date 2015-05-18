@@ -32,10 +32,7 @@ public interface IleEcouteur extends  EventListener
 	public void creationSingeErratique(int id, int x, int y);
 	
 	/**
-	 * Deplacement de l'image du singe erratique identifie aux coordonnees indiquees.
-	 * @param id l'identifiant du singe erratique.
-	 * @param x coordonnee en abscisse du singe erratique.
-	 * @param y coordonnee en ordonnee du singe erratique.
+	 * X and Y co-ordinates of the frame
 	 */
 	public void deplacementSingeErratique(int id, int x, int y);
 	

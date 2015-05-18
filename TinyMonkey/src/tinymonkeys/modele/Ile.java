@@ -16,6 +16,7 @@ import utils.Constantes;
  */
 public class Ile 
 {	
+	private final Random random = new Random();
 	/**
 	 * La carte de l'ile : une matrice indiquant si chaque case est de type mer (0) ou terre (1).
 	 */
@@ -247,14 +248,14 @@ public class Ile
 	 */
 	public void creationTresor()
 	{		
-		final Random random = new Random();
+		
 		int abcisse = 0;
 		int ordonnees = 0;
 
 		boolean place = false;
 		while(!place){
-			abcisse = random.nextInt(this.carte.length);
-			ordonnees = random.nextInt(this.carte.length);
+			abcisse = getRandomNumber(this.carte.length);
+			ordonnees = getRandomNumber(this.carte.length);
 			if(0 != this.valeurCarte(abcisse,ordonnees)){
 				place = true;
 			}
@@ -319,6 +320,10 @@ public class Ile
 	public int[][] getCarte() 
 	{
 		return this.carte;
+	}
+	
+	private int getRandomNumber(int seed){
+		return random.nextInt(seed);
 	}
 	
 }
